@@ -11,9 +11,13 @@ Para hacerlo más sencillo se separó el HEADER, NAV y FOOTER en archivos separa
 >FOOTER: actualmente solo contiene la leyenda del copyright y un enlace a la página de defensa al consumidor "https://autogestion.produccion.gob.ar/consumidores".
 
 >MAIN-index.html: actualmente cuenta con 3 secciones:
+
 >"Últimos ingresos" --> Cuenta con un carrusel para exponer los últimos ingresos de libros a la tienda, dividido en 3 diapositivas (slides) de hasta 3 tarjetas de producto (cards) que cambian cuando el usuario hace click en las flechas a la izquierda (prev) o a la derecha (next) o en los 3 puntos debajo del carrusel (dots) que también marcan en qué slide se encuentra.
+
 >"Más vendidos" --> Para agregar, se puede utilizar la misma estructura de "Últimos ingresos".
+
 >"Quienes somos" --> Un texto corto que cuenta sobre la tienda (actualmente solo cuenta con lorem como placeholder).
+
 >"Contacto" --> Cuenta con un sector con los datos de contacto y los íconos/link de redes sociales (Facebook, Instagram y Youtube), pero estos no llevan a ningún lado. Cuenta con un Iframe de Google Maps y un formulario de contacto que actualmente no envía correo.
 
 >MAIN-login.html: actualmente cuenta con 2 formularios:
@@ -32,16 +36,27 @@ Para hacerlo más sencillo se separó el HEADER, NAV y FOOTER en archivos separa
 #CSS
 
 >style.css: por el momento es el único archivo CSS para el sitio. Está separado en:
+
 >GENERAL: margin, padding base de todo el documento, aspecto de formularios, títulos (h) y enlaces (a). Keyframes para la animación del título y detalle básico del body.
+
 >HEADER-NAV: diseño grid y posición "sticky" para que se comporte como relative con el contenido que le siga esta sección, pero que se comporte como un "fixed" al hacer scroll por la página quedando siempre visible en la parte superior.
+
 >HEADER: diseño grid, características del título como la animación slide in y características del botón de login con bordes diferentes al hacer hover para dar sensación de profundidad.
+
 >NAV: diseño grid de los enlaces de la barra de navegación.
+
 >MAIN: características básicas del main para todos los archivos, altura mínima y posición relative.
+
 >FOOTER: características básicas para el footer y posición static al final de cada página.
+
 >INDEX: diseño grid y características para las secciones "Quienes somos" y "Contacto"
+
 >LOGIN: diseño grid y características para los formularios de login y registro para dar sensación de profundidad.
+
 >CATEGORIAS: diseño grid y características del desplegable.
+
 >LIBROS: diseño de las tarjetas de productos (cards) para los libros a exponer.
+
 >SLIDER: características del carrusel de "Últimos ingresos".
 
 
