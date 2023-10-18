@@ -1,11 +1,13 @@
 /*GENERAL*/
 
 *{
-    padding: 0em;
-    margin: 0em;
-     
-    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* align-items: center; */
+
 }
+
 h1{
     padding-bottom: 0.2em;
     padding-left: 1em;
@@ -13,6 +15,7 @@ h1{
     text-align: left;
     font-family: "Autour One", sans-serif;
 }
+
 h2{
     text-align: center;
     padding: 2em;
@@ -52,7 +55,9 @@ fieldset{
 
 body{
     background-color: rgb(228, 231, 224);
-    font-family: "Oswald",sans-serif;  
+    font-family: "Oswald",sans-serif;
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -158,8 +163,8 @@ main{
     top: 0em;
     position: relative;
     min-height: 30em;
-    
     padding: 1em;
+    display: flexbox;
 }
 
 
@@ -168,7 +173,7 @@ main{
 
 footer{
     grid-area: footer;
-    position:static;
+    position: static;
     bottom: 0em;
     left: 0em;
     height:5em;
@@ -198,18 +203,17 @@ footer{
     grid-row-gap: 0px;
     justify-items: center;
     justify-content: space-between;
-    
     }
     
     
 #datosContacto {
-    height: 50%;
+    height: 10%;
     grid-area: 1 / 1 / 2 / 2;  
     align-content: center;
-    
+
 }
 
-#datosContacto >ul{
+#datosContacto > ul{
     background-color: rgb(89, 192, 158);
     border-radius: 1em;
     border: solid 0.2em cadetblue;
