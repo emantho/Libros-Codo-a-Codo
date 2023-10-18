@@ -25,14 +25,18 @@ h3{
 
 a{
     text-decoration: none;
+    cursor: pointer;
+    
 }
+
+
 
 ul{
     list-style-type: none;
 }
 
 fieldset{
-    background-color: rgb(89, 192, 158);
+    background-color: #ddd;
     border-radius: 1em;
     border: solid 0.2em cadetblue;
     padding: 0.5em;
@@ -55,7 +59,23 @@ body{
     font-family: "Oswald",sans-serif;  
 }
 
+.btn-formulario{
+    border-radius: 10em;
+    border-style: inset;
+    background-color: rgb(32, 138, 106);
+    width: fit-content;
+    height: 2em;
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 1em;
+    padding: 0.2em;
+    cursor: pointer;
+}
 
+.btn-formulario:active{
+    background-color: rgb(72, 177, 142);
+    border-style:outset;
+}
 
 /*HEADER-NAV*/
 
@@ -74,7 +94,7 @@ nav { grid-area: 2 / 1 / 3 / 7; }
 #header-nav-container{
     position: sticky;
     top: 0em;
-    z-index: 1;
+    z-index: 2;
 }
 
 /*HEADER*/
@@ -94,24 +114,26 @@ header{
     grid-row-gap: 0px;
     }
     
-#titulo { grid-area: 1 / 1 / 2 / 6; }
-#login{ grid-area: 1 / 6 / 2 / 7; }
-    
+#titulo { 
+    grid-area: 1 / 1 / 2 / 5;
+    -ms-grid-row-span: 5fr;
+    animation: slideInLeft 1s ease-in-out 0.2s 1 normal both; 
+}
 
 
-#login{
-    
-    text-align: center;
-    text-justify: center;
+#login{ 
+    grid-area: 1 / 5 / 2 / 6;
+    display: inherit;
+    justify-items: center;
     align-items: center;
     justify-items: center;
+    justify-self: right;
     border-radius: 10em;
     border-style: inset;
     background-color: rgb(32, 138, 106);
     width: 5em;
     height: 2em;
-    margin-top: 0.5em;
-    padding-top: 0.5em;
+    margin-top: 0.5em; 
 }
 
 #login:hover{
@@ -119,10 +141,13 @@ header{
     border-style:outset;
 }
 
-#titulo{
-    -ms-grid-row-span: 5fr;
-    animation: slideInLeft 1s ease-in-out 0.2s 1 normal both;
+#carrito{ 
+    grid-area: 1/6/2/7;
+    display: inherit;
+    justify-content: center;
 }
+
+
 /*NAV*/
 
 nav{
@@ -146,6 +171,55 @@ nav{
 
 }
 
+nav a{
+    color: white;
+}
+
+/*DROPDOWN*/
+
+ .dropbtn {
+    background-color: rgb(32, 138, 106);
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  
+ 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+ 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 2.5em;
+    
+  }
+  
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  
+  .show {display:block;} 
 
 
 
@@ -210,7 +284,7 @@ footer{
 }
 
 #datosContacto >ul{
-    background-color: rgb(89, 192, 158);
+    background-color: #ddd;
     border-radius: 1em;
     border: solid 0.2em cadetblue;
 
@@ -267,24 +341,22 @@ footer{
 
 /*LOGIN*/
 
-
 .main-login{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 0em;
+    grid-column-gap: 0px;
     grid-row-gap: 0px;
-    margin-top: 4em;
+    margin-top: 6em;
+    justify-items: center;
+    
+    }
+    
    
-    
-    
-}
- 
-    
 .formularioLogin-container { 
-    grid-area: 1 / 2 / 2 / 3;  
+    grid-area: 1 / 1 / 2 / 2; 
     background-color: #ddd;
-    width: 25em;
+    width: 90%;
     height: 15em;
     border-radius: 1em;
     display: grid;
@@ -295,13 +367,14 @@ footer{
 }
 
 #formularioLogin{
-    width: 20em;
+    width: 30em;
+    background-color: #ddd;
     
 }
 .formularioRegistro-container { 
-    grid-area: 1 / 5 / 2 / 6;
+    grid-area: 1 / 2 / 2 / 3;
     background-color: #ddd;
-    width: 25em;
+    width: 90%;
     border-radius: 1em;
     display: grid;
     justify-items:center;
@@ -309,8 +382,9 @@ footer{
     box-shadow: 0 0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
 }
 
-#formularioRegistro{
-    width: 20em;
+#formularioRegistro {
+    width: 30em;
+    background-color: #ddd;
 }
 
 
@@ -319,34 +393,23 @@ footer{
 
 /*CATEGORIAS*/
 
-.contenedor-categorias {
+.lista-categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    justify-items: center;
-    justify-content: center;
-    margin-top: 4em;
-    padding-top: 0em;
-    background-color: rgb(89, 192, 158);
-    width: 20em;
-    margin-left: 28em;
-    border-radius: 1em;
-    border: solid 0.2em cadetblue;
-    box-shadow: 0 0.4em 0.6em 0 rgba(0, 0, 0, 0.2);
-}
+    position: relative;
     
-.lista-categorias { 
+    }
     
-    grid-area: 1 / 2 / 2 / 3; 
-}
+    #cat-1 { grid-area: 1 / 1 / 2 / 2; }
+    #cat-2 { grid-area: 1 / 2 / 2 / 3; }
+    #cat-3 { grid-area: 1 / 3 / 2 / 4; }
+    #cat-4 { grid-area: 2 / 1 / 3 / 2; }
+    #cat-5 { grid-area: 2 / 2 / 3 / 3; }
+    #cat-6 { grid-area: 2 / 3 / 3 / 4; } 
 
-#titulo-categorias{
-    padding: 1em;
-    padding-top: 0;
-    
-}
 
 .collapsible {
     background-color: #eee;
@@ -360,6 +423,7 @@ footer{
     outline: none;
     font-size: 1em;
     margin: 0.2em;
+   
   }
   
   
@@ -370,8 +434,7 @@ footer{
   
   .content {
     padding: 0.2em;
-    display: none;
-    overflow: hidden;
+    overflow: auto;
     background-color: #f1f1f1;
     width: 10em;
     margin-left: 2.5em;
@@ -503,8 +566,80 @@ footer{
   }
   
 
+/*CARRITO*/
+.carrito {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 1em; 
+    
+    padding: 0.5em;
+    
+    }
+    
+.shopping-cart { 
+    grid-area: 1 / 2 / 2 / 5;
   
+    z-index: 1;  }
+.totals { 
+    grid-area: 2 / 3 / 3 / 4;
+    
+    z-index: 1; } 
+.fondo { 
+    grid-area: 1 / 2 / 3 / 5;
+    background-color: #ddd;
+    border-radius: 1em;
+    z-index: 0;
+    box-shadow: 0 0.2em 0.3em 0 rgba(0, 0, 0, 0.2); } 
+  
+.carrito .totals{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
 
-  
+.totals h3{
+    padding: 0em;
+    padding-bottom: 0.5em;
+    
+}
+
+.checkout{
+    border-radius: 10em;
+    border-style: inset;
+    background-color: rgb(32, 138, 106);
+    width: 5em;
+    height: 2em;
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.checkout:active{
+    background-color: rgb(72, 177, 142);
+    border-style:outset;
+}
+
+.tabla {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    justify-items: center;
+    }
+    
+.div1 { 
+    grid-area: 1 / 1 / 2 / 2;}
+.div2 { grid-area: 1 / 2 / 2 / 3;
+        width: 120%;
+    }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 1 / 4 / 2 / 5; }
+.div5 { grid-area: 1 / 5 / 2 / 6; }
+.div6 { grid-area: 1 / 6 / 2 / 7; } 
   
     
