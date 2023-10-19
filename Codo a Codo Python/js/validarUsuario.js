@@ -1,7 +1,7 @@
 document.getElementById("formularioLogin").addEventListener("submit", function(event) {
     event.preventDefault(); 
 
-    const usuarioInput = document.getElementById("usuario").value;
+    const usuarioInput = document.getElementById("usuarioLogin").value;
 
    
     fetch("https://jsonplaceholder.typicode.com/users")
