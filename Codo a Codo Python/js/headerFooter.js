@@ -6,5 +6,5 @@ function cargarContenido(url, contenedorId) {
       });
   }
  
-  cargarContenido('/html/header.html', 'header-nav-container');
-  cargarContenido('/html/footer.html', 'footer-container');
+  cargarContenido('../html/header.html', 'header-nav-container');
+  cargarContenido('../html/footer.html', 'footer-container');
