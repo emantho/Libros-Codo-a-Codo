@@ -44,11 +44,15 @@ Para hacerlo más sencillo se separó el HEADER, NAV y FOOTER en archivos separa
 
 >NAV: diseño grid de los enlaces de la barra de navegación.
 
->MAIN: características básicas del main para todos los archivos, altura mínima y posición relative.
+>DROPDOWN: Para los menús desplegables
+
+>CONTACTO: características básicas del main para todos los archivos, altura mínima y posición relative.
 
 >FOOTER: características básicas para el footer y posición static al final de cada página.
 
 >INDEX: diseño grid y características para las secciones "Quienes somos" y "Contacto"
+
+>QUIENES SOMOS: Un parrafo de explicación de quien somos, de momento usamos un Lorem
 
 >LOGIN: diseño grid y características para los formularios de login y registro para dar sensación de profundidad.
 
@@ -59,6 +63,9 @@ Para hacerlo más sencillo se separó el HEADER, NAV y FOOTER en archivos separa
 >SLIDER: características del carrusel de "Últimos ingresos".
 
 >CARRITO: características para la página del carrito de compras.
+
+>RESPONSIVE: Se abrieron dos espacios de responsive uno para el H1 y uno para la parte de Grid en CONTACTO
+
 
 
 #JS
