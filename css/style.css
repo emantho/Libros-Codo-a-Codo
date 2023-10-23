@@ -647,56 +647,58 @@ fieldset {
 
 
 /* ------------------ CARRITO ------------------ */
+
+
+
+.body-carrito {
+    display: block;
+}
+
+.main-carrito {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em auto;
+}
+
 .carrito {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+    background-color: #ddd;
+    box-shadow: 0 0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 1em;
-
-    padding: 0.5em;
-
+    padding: auto;
 }
 
 .shopping-cart {
-    grid-area: 1 / 2 / 2 / 5;
-
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .totals {
-    grid-area: 2 / 3 / 3 / 4;
-
-    z-index: 1;
-}
-
-.fondo {
-    grid-area: 1 / 2 / 3 / 5;
-    background-color: #ddd;
-    border-radius: 1em;
-    z-index: 0;
-    box-shadow: 0 0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
-}
-
-.carrito .totals {
     display: grid;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .totals h3 {
-    padding: 0em;
-    padding-bottom: 0.5em;
+    margin: auto;
+}
 
+#cart-total {
+    margin: 0.5em;
+    padding: 0.5em;
 }
 
 .checkout {
     border-radius: 10em;
     border-style: inset;
     background-color: rgb(32, 138, 106);
-    width: 5em;
+    width: 100%;
     height: 2em;
-    margin-top: 0.5em;
+    margin: auto;
+    padding: ;
     text-align: center;
     font-size: 1em;
     cursor: pointer;
@@ -705,6 +707,13 @@ fieldset {
 .checkout:active {
     background-color: rgb(72, 177, 142);
     border-style: outset;
+}
+
+.fondo {
+    background-color: #ddd;
+    border-radius: 1em;
+    z-index: 0;
+    box-shadow: 0 0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
 }
 
 .tabla {
