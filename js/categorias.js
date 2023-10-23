@@ -69,7 +69,7 @@ function mostrarCategoria(categoriaNombre) {
         var tarjeta = document.createElement("div");
         tarjeta.className = "card";
         tarjeta.innerHTML = `
-            <img src="${producto.img}" alt="${producto.titulo}">
+            <img src=".${producto.img}" alt="${producto.titulo}">
             <h4>${producto.titulo}</h4>
             <p class="price">$${producto.precio}</p>
             <p class="genero">${categoriaNombre}</p>
