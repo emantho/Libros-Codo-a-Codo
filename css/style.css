@@ -441,6 +441,18 @@ fieldset {
 
 /* ------------------ CATEGORIAS ------------------ */
 
+.body-categorias {
+    display: block;
+}
+
+.main-categorias {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 2em auto;
+}
+
+
 .lista-categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -448,9 +460,17 @@ fieldset {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     position: relative;
-
+    
 }
 
+#contenido-categoria {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 1em; */
+    justify-items: center;
+    justify-content: space-evenly;
+}
+/* 
 #cat-1 {
     grid-area: 1 / 1 / 2 / 2;
 }
@@ -471,9 +491,9 @@ fieldset {
     grid-area: 2 / 2 / 3 / 3;
 }
 
-#cat-6 {
+/*#cat-6 {
     grid-area: 2 / 3 / 3 / 4;
-}
+} */ */
 
 
 .collapsible {
@@ -516,21 +536,17 @@ fieldset {
 
 
 
-#contenido-categoria {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-    grid-gap: 1em;
-    justify-content: center;
-}
 
 /* ------------------ LIBROS ------------------ */
 
 .card {
     box-shadow: 0 0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
     width: 15em;
+    height: 100%;
     max-height: 40em;
-    padding-top: 0.2em;
-    padding-bottom: 0.1em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    margin-bottom: 0.2em ;
     margin: auto;
     text-align: center;
     font-family: arial;
@@ -544,6 +560,7 @@ fieldset {
 
 .card button {
     border: none;
+    border-radius: 1em;
     outline: 0;
     padding: 0.5em;
     margin-top: 0.3em;
@@ -551,7 +568,7 @@ fieldset {
     background-color: #000;
     text-align: center;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
     font-size: 1em;
 }
 
@@ -560,8 +577,9 @@ fieldset {
 }
 
 .card img {
-    max-width: 10em;
-    max-height: 20em;
+    width: 70%;
+    /* max-width: 10em;
+    max-height: 20em; */
 }
 
 /* ------------------ SLIDER ------------------ */
