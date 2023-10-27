@@ -2,6 +2,21 @@
 El proyecto es sobre una tienda de libros llamada "Codo a Codo" y la idea es crear las páginas básicas que necesitaría (index, categorías, login y registro y en lo posible la sección de compras).
 Para hacerlo más sencillo se separó el HEADER, NAV y FOOTER en archivos separados de HTML que son importados a los archivos principales por medio de JS ("headerFooter.js") para poder modficarlos fácilmente y que se replique en todas la páginas sin modificar una por una. Se utiliza un diseño tipo Grid para poder sectorizar el contenido de manera cómoda.
 
+Estructura utilizada
+
+.
+├── assets
+│   ├── css
+│   │   └── styles.css
+│   ├── js
+│   └── media
+│       ├── audio
+│       ├── icons
+│       ├── image
+│       └── video
+├── index.html
+└── pages
+
 #HTML
 
 >HEAD: favicon de una imagen obtenida de "icons8.com" convertida en "convertico.com". Fuentes de Google Fonts: Autour One, Dancing Lights, Mohave y Oswald. Actualmente se importa un solo archivo CSS "style.css" para todas las páginas, idealmente tendríamos un archivo CSS común para HEADER, NAV, FOOTER y cuestiones generales que se quieran mantener en todos las páginas, por ejemplo: color de fondo del body, margin y padding 0 como base y estilos particulares de los h1, h2 o h3 que se quieren mantener en todos los archivos y por otro lado cada página importaría su propio archivo CSS también para poder modularizar el CSS y que sea más fácil de leer y modificar. 
